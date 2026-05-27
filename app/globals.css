@@ -1,0 +1,376 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* El Banquete Gastronómico — Premium B&W Palette */
+  --background: oklch(0.98 0.005 90);       /* off-white / warm paper */
+  --foreground: oklch(0.10 0 0);            /* near black */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.10 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.10 0 0);
+  --primary: oklch(0.10 0 0);               /* black */
+  --primary-foreground: oklch(0.98 0.005 90);
+  --secondary: oklch(0.93 0.005 90);        /* light grey */
+  --secondary-foreground: oklch(0.10 0 0);
+  --muted: oklch(0.93 0.005 90);
+  --muted-foreground: oklch(0.45 0 0);
+  --accent: oklch(0.82 0.04 85);            /* champagne / warm gold */
+  --accent-foreground: oklch(0.10 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.85 0.005 90);
+  --input: oklch(0.85 0.005 90);
+  --ring: oklch(0.45 0 0);
+  --radius: 0rem;
+
+  /* Custom tokens */
+  --gold: oklch(0.75 0.06 85);
+  --dark-section: oklch(0.10 0 0);
+  --dark-section-foreground: oklch(0.98 0.005 90);
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-cormorant);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Utility: thin letter-spacing for headings */
+.tracking-editorial {
+  letter-spacing: 0.12em;
+}
+
+.tracking-wide-xl {
+  letter-spacing: 0.25em;
+}
+
+/* ─── Marquee animations for gallery ─── */
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+.animate-marquee {
+  animation: marquee-left 40s linear infinite;
+}
+
+/* ─── Premium hero entrance animations ─── */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes hero-line-grow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes hero-image-reveal {
+  from {
+    transform: scale(1.08);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-hero-fade-up {
+  animation: hero-fade-up 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-hero-fade-in {
+  animation: hero-fade-in 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-hero-line {
+  animation: hero-line-grow 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transform-origin: top;
+}
+
+.animate-hero-image {
+  animation: hero-image-reveal 2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Animation delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+.delay-1000 { animation-delay: 1000ms; }
+.delay-1200 { animation-delay: 1200ms; }
+
+/* ─── Premium button system ─── */
+
+/* Btn-primary: solid fill with sliding background on hover */
+.btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 1.05rem 2rem;
+  overflow: hidden;
+  z-index: 0;
+  transition:
+    color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Light primary (white bg, dark text) */
+.btn-primary-light {
+  background: white;
+  color: var(--foreground);
+}
+.btn-primary-light::before {
+  background: var(--foreground);
+  transform: translateX(-100%);
+}
+.btn-primary-light:hover {
+  color: white;
+}
+.btn-primary-light:hover::before {
+  transform: translateX(0);
+}
+
+/* Dark primary (dark bg, light text) */
+.btn-primary-dark {
+  background: var(--foreground);
+  color: var(--primary-foreground);
+}
+.btn-primary-dark::before {
+  background: oklch(0.25 0 0);
+  transform: translateX(-100%);
+}
+.btn-primary-dark:hover::before {
+  transform: translateX(0);
+}
+
+/* Outlined primary (border, transparent bg) */
+.btn-primary-outline {
+  background: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--foreground);
+}
+.btn-primary-outline::before {
+  background: var(--foreground);
+  transform: translateX(-100%);
+}
+.btn-primary-outline:hover {
+  color: var(--primary-foreground);
+}
+.btn-primary-outline:hover::before {
+  transform: translateX(0);
+}
+
+/* Btn-text: elegant text link with animated underline */
+.btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  position: relative;
+  transition:
+    color 0.35s ease;
+}
+
+.btn-text .btn-text-line {
+  display: inline-block;
+  height: 1px;
+  width: 2rem;
+  background: currentColor;
+  transition:
+    width 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.3s ease;
+}
+
+.btn-text:hover .btn-text-line {
+  width: 3.5rem;
+}
+
+/* ─── Nav link hover effect ─── */
+.nav-link {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ─── Contact row hover ─── */
+.contact-row {
+  transition:
+    background-color 0.35s ease,
+    padding-left 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.contact-row:hover {
+  padding-left: calc(1.5rem + 8px);
+}
+@media (min-width: 768px) {
+  .contact-row:hover {
+    padding-left: calc(3rem + 12px);
+  }
+}
+
+.contact-row .contact-arrow {
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.3s ease;
+}
+.contact-row:hover .contact-arrow {
+  transform: translate(4px, -4px);
+}
+
+/* ─── Header navbar CTA button ─── */
+.navbar-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  overflow: hidden;
+  z-index: 0;
+  transition:
+    color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.4s ease;
+}
+
+.navbar-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Solid black navbar CTA */
+.navbar-cta-solid {
+  background: var(--foreground);
+  color: var(--primary-foreground);
+}
+.navbar-cta-solid::before {
+  background: oklch(0.30 0 0);
+  transform: translateX(-100%);
+}
+.navbar-cta-solid:hover::before {
+  transform: translateX(0);
+}
+
+/* Transparent (hero-state) navbar CTA */
+.navbar-cta-glass {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(4px);
+}
+.navbar-cta-glass::before {
+  background: white;
+  transform: translateX(-100%);
+}
+.navbar-cta-glass:hover {
+  color: var(--foreground);
+}
+.navbar-cta-glass:hover::before {
+  transform: translateX(0);
+}
+
+/* ─── Gradient fade for hero top ─── */
+.hero-gradient-top {
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.45) 0%,
+    rgba(0,0,0,0.15) 50%,
+    transparent 100%
+  );
+}
