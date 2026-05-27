@@ -42,6 +42,7 @@ export default function Navbar() {
             alt="El Banquete Gastronómico"
             width={160}
             height={160}
+            priority
             className="h-16 md:h-20 w-auto object-contain transition-all duration-500"
           />
         </a>
