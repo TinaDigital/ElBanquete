@@ -37,7 +37,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#" className="flex-shrink-0 relative">
           <Image
-            src={scrolled ? "/Logos/LogoBanquete-negropng.png" : "/Logos/LogoBanquete-blancopng.png"}
+            src="/Logos/LOGO BANQUETE1.png"
             alt="El Banquete Gastronómico"
             width={160}
             height={160}

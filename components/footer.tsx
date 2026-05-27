@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-10">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <Image
-            src="/Logos/LogoBanquete-blancopng.png"
+            src="/Logos/LOGO BANQUETE1.png"
             alt="El Banquete Gastronómico"
             width={160}
             height={160}
