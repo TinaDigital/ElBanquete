@@ -107,7 +107,7 @@ function DetailPanel({ menu }: { menu: typeof menus[0] }) {
             href="https://wa.me/5491157826089"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary btn-primary-dark whitespace-nowrap"
+            className="btn-primary btn-primary-dark w-full md:w-auto justify-center text-center whitespace-normal md:whitespace-nowrap"
           >
             Consultar por WhatsApp
           </a>

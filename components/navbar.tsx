@@ -8,7 +8,6 @@ const navLinks = [
   { label: "Nosotros", href: "#nosotros" },
   { label: "Eventos", href: "#eventos" },
   { label: "Menús", href: "#menus" },
-  { label: "La Quinta", href: "#quinta" },
   { label: "Contacto", href: "#contacto" },
 ]
 
@@ -25,8 +24,8 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-200 ${scrolled
-          ? "bg-background/95 border-border shadow-[0_1px_20px_rgba(0,0,0,0.04)] backdrop-blur-md"
-          : "bg-transparent border-transparent"
+        ? "bg-background/95 border-border shadow-[0_1px_20px_rgba(0,0,0,0.04)] backdrop-blur-md"
+        : "bg-transparent border-transparent"
         }`}
     >
       {/* Top gradient for readability when header is transparent */}
@@ -54,8 +53,8 @@ export default function Navbar() {
               <a
                 href={link.href}
                 className={`nav-link text-xs tracking-wide-xl uppercase transition-colors duration-300 ${scrolled
-                    ? "text-foreground/60 hover:text-foreground"
-                    : "text-white/70 hover:text-white"
+                  ? "text-foreground/60 hover:text-foreground"
+                  : "text-white/70 hover:text-white"
                   }`}
               >
                 {link.label}
@@ -107,7 +106,7 @@ export default function Navbar() {
             href="https://wa.me/5491157826089"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 btn-primary btn-primary-dark"
+            className="mt-2 btn-primary btn-primary-dark w-full justify-center text-center whitespace-normal"
           >
             Consultar por WhatsApp
           </a>

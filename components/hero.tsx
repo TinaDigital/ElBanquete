@@ -32,19 +32,18 @@ export default function Hero() {
             Un servicio gastronómico premium para eventos de todo tipo,
             en Quinta Pepe Reina o en la locación que elijas.
           </p>
-
-          <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-5 animate-hero-fade-up delay-800">
+          <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-5 animate-hero-fade-up delay-800">
             <a
               href="https://wa.me/5491157826089"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary btn-primary-light"
+              className="btn-primary btn-primary-light w-full sm:w-auto justify-center text-center whitespace-normal sm:whitespace-nowrap"
             >
               Consultar por WhatsApp
             </a>
             <a
               href="#menus"
-              className="btn-text text-white/55 hover:text-white"
+              className="btn-text text-white/55 hover:text-white justify-center"
             >
               Ver menús
               <span className="btn-text-line" />

@@ -5,7 +5,7 @@ export default function Contact() {
     <section id="contacto" className="bg-background py-24 md:py-36 border-t border-border overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-center">
-          
+
           {/* Left Column: Contact details and links */}
           <div className="md:col-span-6 lg:col-span-7">
             {/* Heading */}
@@ -13,7 +13,7 @@ export default function Contact() {
               <p className="font-sans text-xs tracking-wide-xl uppercase text-muted-foreground mb-5">
                 Contacto
               </p>
-              <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-foreground leading-tight text-balance animate-hero-fade-up">
+              <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl text-foreground leading-tight text-balance animate-hero-fade-up">
                 ¿Tenés un evento<br />
                 <em className="italic font-light">en mente?</em>
               </h2>
@@ -30,13 +30,13 @@ export default function Contact() {
                 href="https://wa.me/5491157826089"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact-row group flex items-center justify-between py-7 hover:bg-secondary -mx-6 px-6 md:-mx-12 md:px-12 transition-all duration-300"
+                className="contact-row group flex items-center justify-between py-7 hover:bg-secondary -mx-4 px-4 transition-all duration-300"
               >
-                <div className="flex items-center gap-6">
+                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
                   <span className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground w-20 shrink-0">
                     WhatsApp
                   </span>
-                  <span className="font-serif text-2xl md:text-3xl text-foreground">
+                  <span className="font-serif text-xl md:text-3xl text-foreground break-all">
                     Reservá tu fecha
                   </span>
                 </div>
@@ -53,13 +53,13 @@ export default function Contact() {
               {/* Email */}
               <a
                 href="mailto:contacto@elbanquete.com.ar"
-                className="contact-row group flex items-center justify-between py-7 hover:bg-secondary -mx-6 px-6 md:-mx-12 md:px-12 transition-all duration-300"
+                className="contact-row group flex items-center justify-between py-7 hover:bg-secondary -mx-4 px-4 transition-all duration-300"
               >
-                <div className="flex items-center gap-6">
+                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
                   <span className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground w-20 shrink-0">
                     Email
                   </span>
-                  <span className="font-serif text-2xl md:text-3xl text-foreground">
+                  <span className="font-serif text-xl md:text-3xl text-foreground break-all">
                     contacto@elbanquete.com.ar
                   </span>
                 </div>
@@ -75,13 +75,13 @@ export default function Contact() {
                 href="https://www.instagram.com/banquetegastronomico/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact-row group flex items-center justify-between py-7 hover:bg-secondary -mx-6 px-6 md:-mx-12 md:px-12 transition-all duration-300"
+                className="contact-row group flex items-center justify-between py-7 hover:bg-secondary -mx-4 px-4 transition-all duration-300"
               >
-                <div className="flex items-center gap-6">
+                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
                   <span className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground w-20 shrink-0">
                     Instagram
                   </span>
-                  <span className="font-serif text-2xl md:text-3xl text-foreground">
+                  <span className="font-serif text-xl md:text-3xl text-foreground break-all">
                     @banquetegastronomico
                   </span>
                 </div>
@@ -100,13 +100,13 @@ export default function Contact() {
 
           {/* Right Column: Premium overlapping image collage */}
           <div className="md:col-span-6 lg:col-span-5">
-            <div className="relative w-full h-[400px] md:h-[550px] select-none">
-              
+            <div className="relative w-full h-[400px] md:h-[550px] select-none overflow-hidden md:overflow-visible">
+
               {/* Photo 1: Large Center-Left (Catering Setup) */}
               <div className="absolute top-[10%] left-[5%] w-[55%] h-[60%] rotate-[-4deg] transition-all duration-500 hover:rotate-0 hover:scale-105 hover:z-40 hover:shadow-2xl shadow-lg border-[6px] border-white bg-white">
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
-                    src="/Fotos/IMG_0400.jpg"
+                    src="/Fotos/IMG_1881.jpg"
                     alt="Celebración El Banquete"
                     fill
                     className="object-cover"
@@ -153,7 +153,7 @@ export default function Contact() {
                   />
                 </div>
               </div>
-              
+
             </div>
           </div>
 
