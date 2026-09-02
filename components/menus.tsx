@@ -10,8 +10,8 @@ const menus = [
     highlight: "Asado a la cruz · Vacío a la leña · Pechito de cerdo · Pollo a las brasas",
     courses: ["Recepción", "Principal · Parrilla", "Guarnición", "Postre", "Mesa Dulce"],
     images: [
-      "/fotos/parrilla-01.jpeg",
-      "/fotos/mesas-01.jpeg",
+      "/Fotos/parrilla-01.jpeg",
+      "/Fotos/mesas-01.jpeg",
     ],
   },
   {
@@ -20,8 +20,8 @@ const menus = [
     highlight: "Costillar a la leña · Vacío al asador · Bondiola ahumada · Pollo oreganatto",
     courses: ["Recepción · Isla de fiambres", "Principal · Parrilla", "Ensaladas a elección", "Postre", "Mesa Dulce"],
     images: [
-      "/fotos/asado-01.jpeg",
-      "/fotos/parrilla-02.jpeg",
+      "/Fotos/asado-01.jpeg",
+      "/Fotos/parrilla-02.jpeg",
     ],
   },
   {
@@ -30,8 +30,8 @@ const menus = [
     highlight: "Pernil 15hs a fuego lento · Ravioles de ricota · Cazuela bandejeada",
     courses: ["Bocados fríos y calientes", "Principal", "Postre", "Mesa Dulce"],
     images: [
-      "/fotos/fingerfood-01.jpeg",
-      "/fotos/fingerfood-02.jpeg",
+      "/Fotos/fingerfood-01.jpeg",
+      "/Fotos/fingerfood-02.jpeg",
     ],
   },
   {
@@ -40,8 +40,8 @@ const menus = [
     highlight: "Gravlax de trucha · Arancini · Langostinos · Lomo y vegetales",
     courses: ["Bocados fríos y calientes", "Islas a elección × 3", "Postre", "Mesa Dulce", "Fin de fiesta"],
     images: [
-      "/fotos/sushi-01.jpeg",
-      "/fotos/bruschettas-01.jpeg",
+      "/Fotos/sushi-01.jpeg",
+      "/Fotos/bruschettas-01.jpeg",
     ],
   },
   {
@@ -50,8 +50,8 @@ const menus = [
     highlight: "Servicio de mesa completo para eventos de máxima distinción",
     courses: ["Entrada", "Principal", "Postre", "Mesa Dulce"],
     images: [
-      "/fotos/postre-02.jpeg",
-      "/fotos/postre-03.jpeg",
+      "/Fotos/postre-02.jpeg",
+      "/Fotos/postre-03.jpeg",
     ],
   },
 ]
@@ -200,9 +200,8 @@ export default function Menus() {
               <button
                 key={m.name}
                 onClick={() => handleSelect(i)}
-                className={`w-full text-left px-6 py-5 flex items-center justify-between gap-4 border-b last:border-b-0 border-border transition-colors duration-200 flex-1 ${
-                  active === i ? "bg-foreground" : "bg-background hover:bg-secondary"
-                }`}
+                className={`w-full text-left px-6 py-5 flex items-center justify-between gap-4 border-b last:border-b-0 border-border transition-colors duration-200 flex-1 ${active === i ? "bg-foreground" : "bg-background hover:bg-secondary"
+                  }`}
               >
                 <div>
                   <p className={`font-sans text-[10px] tracking-wide-xl uppercase mb-1 ${active === i ? "text-white/40" : "text-muted-foreground"}`}>
@@ -233,9 +232,8 @@ export default function Menus() {
             <div key={m.name} className="border-b last:border-b-0 border-border">
               <button
                 onClick={() => setActive(active === i ? -1 : i)}
-                className={`w-full text-left px-5 py-5 flex items-center justify-between gap-4 transition-colors duration-200 ${
-                  active === i ? "bg-foreground" : "bg-background"
-                }`}
+                className={`w-full text-left px-5 py-5 flex items-center justify-between gap-4 transition-colors duration-200 ${active === i ? "bg-foreground" : "bg-background"
+                  }`}
                 aria-expanded={active === i}
               >
                 <div>

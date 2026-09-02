@@ -31,7 +31,7 @@ export default function About() {
           {/* Image */}
           <div className="relative h-[440px] md:h-[520px]">
             <Image
-              src="/fotos/sushigrande.jpeg"
+              src="/Fotos/sushigrande.jpeg"
               alt="El Banquete — preparación gastronómica"
               fill
               className="object-cover"

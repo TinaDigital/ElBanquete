@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/fotos/fondohero.jpeg"
+          src="/Fotos/fondohero.jpeg"
           alt="El Banquete Gastronómico — mesas elegantes para eventos"
           fill
           priority
