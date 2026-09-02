@@ -31,7 +31,7 @@ export default function About() {
           {/* Image */}
           <div className="relative h-[440px] md:h-[520px]">
             <Image
-              src="/fotos/WhatsApp Image 2026-08-26 at 12.42.01 (1).jpeg"
+              src="/fotos/sushigrande.jpeg"
               alt="El Banquete — preparación gastronómica"
               fill
               className="object-cover"

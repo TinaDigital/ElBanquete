@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/fotos/WhatsApp Image 2026-08-26 at 12.42.07 (1).jpeg"
+          src="/fotos/fondohero.jpeg"
           alt="El Banquete Gastronómico — mesas elegantes para eventos"
           fill
           priority

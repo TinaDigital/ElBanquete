@@ -10,8 +10,8 @@ const menus = [
     highlight: "Asado a la cruz · Vacío a la leña · Pechito de cerdo · Pollo a las brasas",
     courses: ["Recepción", "Principal · Parrilla", "Guarnición", "Postre", "Mesa Dulce"],
     images: [
-      "/fotos/WhatsApp Image 2026-08-26 at 12.42.03.jpeg",
-      "/fotos/WhatsApp Image 2026-08-26 at 12.42.07 (1).jpeg",
+      "/fotos/parrilla-01.jpeg",
+      "/fotos/mesas-01.jpeg",
     ],
   },
   {
@@ -20,8 +20,8 @@ const menus = [
     highlight: "Costillar a la leña · Vacío al asador · Bondiola ahumada · Pollo oreganatto",
     courses: ["Recepción · Isla de fiambres", "Principal · Parrilla", "Ensaladas a elección", "Postre", "Mesa Dulce"],
     images: [
-      "/fotos/WhatsApp Image 2026-08-26 at 12.42.04 (2).jpeg",
-      "/fotos/WhatsApp Image 2026-08-26 at 12.42.03 (1).jpeg",
+      "/fotos/asado-01.jpeg",
+      "/fotos/parrilla-02.jpeg",
     ],
   },
   {
@@ -30,8 +30,8 @@ const menus = [
     highlight: "Pernil 15hs a fuego lento · Ravioles de ricota · Cazuela bandejeada",
     courses: ["Bocados fríos y calientes", "Principal", "Postre", "Mesa Dulce"],
     images: [
-      "/fotos/WhatsApp Image 2026-08-26 at 12.42.05.jpeg",
-      "/fotos/WhatsApp Image 2026-08-26 at 12.42.05 (1).jpeg",
+      "/fotos/fingerfood-01.jpeg",
+      "/fotos/fingerfood-02.jpeg",
     ],
   },
   {
@@ -40,8 +40,8 @@ const menus = [
     highlight: "Gravlax de trucha · Arancini · Langostinos · Lomo y vegetales",
     courses: ["Bocados fríos y calientes", "Islas a elección × 3", "Postre", "Mesa Dulce", "Fin de fiesta"],
     images: [
-      "/fotos/WhatsApp Image 2026-08-26 at 12.42.02 (1).jpeg",
-      "/fotos/WhatsApp Image 2026-08-26 at 12.42.04.jpeg",
+      "/fotos/sushi-01.jpeg",
+      "/fotos/bruschettas-01.jpeg",
     ],
   },
   {
@@ -50,8 +50,8 @@ const menus = [
     highlight: "Servicio de mesa completo para eventos de máxima distinción",
     courses: ["Entrada", "Principal", "Postre", "Mesa Dulce"],
     images: [
-      "/fotos/WhatsApp Image 2026-08-26 at 12.42.06 (1).jpeg",
-      "/fotos/WhatsApp Image 2026-08-26 at 12.42.06 (2).jpeg",
+      "/fotos/postre-02.jpeg",
+      "/fotos/postre-03.jpeg",
     ],
   },
 ]
