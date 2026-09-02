@@ -6,8 +6,8 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/Fotos/pauyjuampi-797.jpg"
-          alt="El Banquete Gastronómico — celebración y catering"
+          src="/fotos/WhatsApp Image 2026-08-26 at 12.42.07 (1).jpeg"
+          alt="El Banquete Gastronómico — mesas elegantes para eventos"
           fill
           priority
           className="object-cover animate-hero-image"

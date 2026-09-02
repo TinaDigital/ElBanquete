@@ -3,15 +3,17 @@
 import Image from "next/image"
 
 const rowOne = [
-  { src: "/Fotos/162958c0-4131-4be3-865b-16abc401f2f2.jpg", alt: "Evento de gala — El Banquete Gastronómico", aspectRatio: 1280 / 853 },
   { src: "/Fotos/36a95199-260e-4376-a8db-1863647f4670.jpg", alt: "Detalle gastronómico — El Banquete", aspectRatio: 3024 / 4032 },
   { src: "/Fotos/292.jpg", alt: "Celebración especial — El Banquete Gastronómico", aspectRatio: 5440 / 3631 },
-  { src: "/Fotos/3abac21d-d23f-4438-be45-98cd73dfd5b1.jpg", alt: "Plato gourmet — El Banquete", aspectRatio: 1280 / 853 },
   { src: "/Fotos/681b5c51-6c7f-4df4-a49b-522954f61d2b.jpg", alt: "Banquete premium — El Banquete Gastronómico", aspectRatio: 3024 / 4032 },
   { src: "/Fotos/52284eb1-c9fd-4d0f-a7f2-c02ef04cb717.jpg", alt: "Servicio exclusivo — El Banquete", aspectRatio: 1280 / 853 },
-  { src: "/Fotos/IMG_0400.jpg", alt: "Mesa principal — El Banquete Gastronómico", aspectRatio: 3600 / 2400 },
-  { src: "/Fotos/pauyjuampi-797.jpg", alt: "Recepción al aire libre — El Banquete", aspectRatio: 3600 / 2403 },
+  { src: "/fotos/WhatsApp Image 2026-08-26 at 12.42.05.jpeg", alt: "Finger food — El Banquete", aspectRatio: 3024 / 4032 },
+  { src: "/fotos/WhatsApp Image 2026-08-26 at 12.42.06 (1).jpeg", alt: "Postres de autor — El Banquete Gastronómico", aspectRatio: 3024 / 4032 },
+  { src: "/fotos/WhatsApp Image 2026-08-26 at 12.42.02 (1).jpeg", alt: "Sushi y rolls — El Banquete", aspectRatio: 3024 / 4032 },
+  { src: "/fotos/WhatsApp Image 2026-08-26 at 12.42.01.jpeg", alt: "Recepción de lujo — El Banquete Gastronómico", aspectRatio: 3024 / 4032 },
+  { src: "/fotos/WhatsApp Image 2026-08-26 at 12.42.06 (2).jpeg", alt: "Cheesecake premium — El Banquete", aspectRatio: 3024 / 4032 },
 ]
+
 
 const rowTwo = [
   { src: "/Fotos/26431c47-a5f9-446e-8bfe-8ab0a05a9df8.jpg", alt: "Cocina premium — El Banquete", aspectRatio: 1280 / 853 },
@@ -20,7 +22,7 @@ const rowTwo = [
   { src: "/Fotos/c9c2f2b7-c284-471b-91e0-76a703dffe90.jpg", alt: "Detalle de mesa — El Banquete Gastronómico", aspectRatio: 1280 / 853 },
   { src: "/Fotos/IMG_1881.jpg", alt: "Cocktail y bar — El Banquete", aspectRatio: 3024 / 4032 },
   { src: "/Fotos/IMG_9515.jpg", alt: "Preparación gourmet — El Banquete", aspectRatio: 5472 / 3648 },
-  { src: "/Fotos/pauyjuampi-800.jpg", alt: "Celebración y alegría — El Banquete", aspectRatio: 3600 / 2403 },
+  { src: "/Fotos/WhatsApp Image 2026-08-26 at 12.42.05 (2).jpeg", alt: "Banquete de autor — El Banquete Gastronómico", aspectRatio: 3024 / 4032 },
 ]
 
 function GalleryRow({

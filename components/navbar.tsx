@@ -33,22 +33,10 @@ export default function Navbar() {
         <div className="absolute inset-0 hero-gradient-top pointer-events-none" />
       )}
 
-      <nav className="relative max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-20 md:h-24">
-        {/* Logo */}
-        <a href="#" className="flex-shrink-0 relative">
-          <Image
-            src={scrolled ? "/Logos/LOGO BANQUETE3.png" : "/Logos/LOGO BANQUETE1.png"}
-            alt="El Banquete Gastronómico"
-            width={160}
-            height={160}
-            priority
-            className="h-16 md:h-20 w-auto object-contain transition-all duration-500"
-          />
-        </a>
-
-        {/* Desktop nav */}
+      <nav className="relative max-w-7xl mx-auto px-6 md:px-12 h-24 md:h-28 grid grid-cols-[1fr_auto_1fr] items-center">
+        {/* Desktop nav — izquierda */}
         <ul className="hidden md:flex items-center gap-10">
-          {navLinks.map((link) => (
+          {navLinks.slice(0, 2).map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
@@ -63,26 +51,55 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA */}
-        <a
-          href="https://wa.me/5491157826089"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`hidden md:inline-flex ${scrolled ? "navbar-cta navbar-cta-solid" : "navbar-cta navbar-cta-glass"
-            }`}
-        >
-          Consultar
-        </a>
-
-        {/* Mobile toggle */}
+        {/* Mobile toggle — izquierda en mobile */}
         <button
-          className={`md:hidden transition-colors duration-300 ${scrolled ? "text-foreground" : "text-white"
+          className={`md:hidden justify-self-start transition-colors duration-300 ${scrolled ? "text-foreground" : "text-white"
             }`}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
         >
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
+
+        {/* Logo — centro */}
+        <a href="#" className="flex items-center justify-center">
+          <Image
+            src={scrolled ? "/Logos/LOGO BANQUETE3.png" : "/Logos/LOGO BANQUETE1.png"}
+            alt="El Banquete Gastronómico"
+            width={220}
+            height={220}
+            priority
+            className="h-20 md:h-24 w-auto object-contain transition-all duration-500"
+          />
+        </a>
+
+        {/* CTA — derecha */}
+        <div className="flex items-center justify-end gap-10">
+          <ul className="hidden md:flex items-center gap-10">
+            {navLinks.slice(2).map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className={`nav-link text-xs tracking-wide-xl uppercase transition-colors duration-300 ${scrolled
+                    ? "text-foreground/60 hover:text-foreground"
+                    : "text-white/70 hover:text-white"
+                    }`}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href="https://wa.me/5491157826089"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`hidden md:inline-flex ${scrolled ? "navbar-cta navbar-cta-solid" : "navbar-cta navbar-cta-glass"
+              }`}
+          >
+            Consultar
+          </a>
+        </div>
       </nav>
 
       {/* Mobile menu */}

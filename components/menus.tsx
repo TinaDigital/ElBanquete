@@ -9,35 +9,50 @@ const menus = [
     tag: "Tradicional",
     highlight: "Asado a la cruz · Vacío a la leña · Pechito de cerdo · Pollo a las brasas",
     courses: ["Recepción", "Principal · Parrilla", "Guarnición", "Postre", "Mesa Dulce"],
-    images: ["/Fotos/52284eb1-c9fd-4d0f-a7f2-c02ef04cb717.jpg", "/Fotos/26431c47-a5f9-446e-8bfe-8ab0a05a9df8.jpg"],
+    images: [
+      "/fotos/WhatsApp Image 2026-08-26 at 12.42.03.jpeg",
+      "/fotos/WhatsApp Image 2026-08-26 at 12.42.07 (1).jpeg",
+    ],
   },
   {
     name: "Criollo Premium",
     tag: "Distinguido",
     highlight: "Costillar a la leña · Vacío al asador · Bondiola ahumada · Pollo oreganatto",
     courses: ["Recepción · Isla de fiambres", "Principal · Parrilla", "Ensaladas a elección", "Postre", "Mesa Dulce"],
-    images: ["/Fotos/b6f899dd-1b58-4455-a645-6f40c159f411.jpg", "/Fotos/3abac21d-d23f-4438-be45-98cd73dfd5b1.jpg"],
+    images: [
+      "/fotos/WhatsApp Image 2026-08-26 at 12.42.04 (2).jpeg",
+      "/fotos/WhatsApp Image 2026-08-26 at 12.42.03 (1).jpeg",
+    ],
   },
   {
     name: "Finger Food Clásico",
     tag: "Cóctel",
     highlight: "Pernil 15hs a fuego lento · Ravioles de ricota · Cazuela bandejeada",
     courses: ["Bocados fríos y calientes", "Principal", "Postre", "Mesa Dulce"],
-    images: ["/Fotos/162958c0-4131-4be3-865b-16abc401f2f2.jpg", "/Fotos/c9c2f2b7-c284-471b-91e0-76a703dffe90.jpg"],
+    images: [
+      "/fotos/WhatsApp Image 2026-08-26 at 12.42.05.jpeg",
+      "/fotos/WhatsApp Image 2026-08-26 at 12.42.05 (1).jpeg",
+    ],
   },
   {
     name: "Finger Food Gourmet",
     tag: "Alta cocina",
     highlight: "Gravlax de trucha · Arancini · Langostinos · Lomo y vegetales",
     courses: ["Bocados fríos y calientes", "Islas a elección × 3", "Postre", "Mesa Dulce", "Fin de fiesta"],
-    images: ["/Fotos/IMG_9515.jpg", "/Fotos/36a95199-260e-4376-a8db-1863647f4670.jpg"],
+    images: [
+      "/fotos/WhatsApp Image 2026-08-26 at 12.42.02 (1).jpeg",
+      "/fotos/WhatsApp Image 2026-08-26 at 12.42.04.jpeg",
+    ],
   },
   {
     name: "Formal al Plato",
     tag: "Premium",
     highlight: "Servicio de mesa completo para eventos de máxima distinción",
     courses: ["Entrada", "Principal", "Postre", "Mesa Dulce"],
-    images: ["/Fotos/pauyjuampi-800.jpg", "/Fotos/b6096c4a-eb94-4958-ab75-3807233970cb.jpg"],
+    images: [
+      "/fotos/WhatsApp Image 2026-08-26 at 12.42.06 (1).jpeg",
+      "/fotos/WhatsApp Image 2026-08-26 at 12.42.06 (2).jpeg",
+    ],
   },
 ]
 
@@ -132,8 +147,35 @@ function DetailPanel({ menu }: { menu: typeof menus[0] }) {
   )
 }
 
+// Animated accordion panel for mobile
+function AccordionPanel({ menu, isOpen }: { menu: typeof menus[0]; isOpen: boolean }) {
+  return (
+    <div
+      className="overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+      style={{ maxHeight: isOpen ? "900px" : 0, opacity: isOpen ? 1 : 0 }}
+    >
+      <div className="bg-background border-t border-border">
+        <DetailPanel menu={menu} />
+      </div>
+    </div>
+  )
+}
+
 export default function Menus() {
   const [active, setActive] = useState(0)
+  // Fade key to trigger re-animation on desktop panel change
+  const [fadeKey, setFadeKey] = useState(0)
+  const [isAnimating, setIsAnimating] = useState(false)
+
+  function handleSelect(i: number) {
+    if (i === active) return
+    setIsAnimating(true)
+    setTimeout(() => {
+      setActive(i)
+      setFadeKey((k) => k + 1)
+      setIsAnimating(false)
+    }, 160)
+  }
 
   return (
     <section id="menus" className="py-24 md:py-36 bg-background">
@@ -151,13 +193,13 @@ export default function Menus() {
         </div>
 
         {/* Desktop: sidebar + fixed-height panel */}
-        <div className="hidden md:grid md:grid-cols-12 border border-border" style={{ minHeight: 480 }}>
+        <div className="hidden md:grid md:grid-cols-12 border border-border" style={{ height: 560 }}>
           {/* Sidebar */}
           <div className="col-span-4 border-r border-border flex flex-col">
             {menus.map((m, i) => (
               <button
                 key={m.name}
-                onClick={() => setActive(i)}
+                onClick={() => handleSelect(i)}
                 className={`w-full text-left px-6 py-5 flex items-center justify-between gap-4 border-b last:border-b-0 border-border transition-colors duration-200 flex-1 ${
                   active === i ? "bg-foreground" : "bg-background hover:bg-secondary"
                 }`}
@@ -175,13 +217,17 @@ export default function Menus() {
             ))}
           </div>
 
-          {/* Detail panel — fixed height, no jump. Uses menus[active] or fallback to menus[0] to prevent crash when active is -1 on mobile */}
-          <div className="col-span-8">
+          {/* Detail panel — altura fija, sin overflow, fade suave al cambiar */}
+          <div
+            className="col-span-8 overflow-hidden transition-opacity duration-160"
+            style={{ opacity: isAnimating ? 0 : 1 }}
+            key={fadeKey}
+          >
             <DetailPanel menu={menus[active] || menus[0]} />
           </div>
         </div>
 
-        {/* Mobile: accordion — detail expands inline below each item */}
+        {/* Mobile: accordion animado con max-height */}
         <div className="md:hidden border border-border">
           {menus.map((m, i) => (
             <div key={m.name} className="border-b last:border-b-0 border-border">
@@ -213,12 +259,7 @@ export default function Menus() {
                 </svg>
               </button>
 
-              {/* Inline detail — expands below the button */}
-              {active === i && (
-                <div className="bg-background border-t border-border">
-                  <DetailPanel menu={m} />
-                </div>
-              )}
+              <AccordionPanel menu={m} isOpen={active === i} />
             </div>
           ))}
         </div>
