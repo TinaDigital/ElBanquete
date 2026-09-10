@@ -7,7 +7,7 @@ export default function Quinta() {
       <div className="relative h-[50vh] md:h-[60vh] overflow-hidden">
         <Image
           src="/placeholder.svg?height=900&width=1920"
-          alt="Quinta Pepe Reina — salón y jardines"
+          alt="Espacio El Banquete — salón y jardines"
           fill
           className="object-cover"
         />
@@ -18,7 +18,7 @@ export default function Quinta() {
               Nuestra sede
             </p>
             <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl text-white text-balance">
-              Quinta Pepe Reina
+              Espacio El Banquete
             </h2>
           </div>
         </div>

@@ -20,7 +20,7 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: 'Catering para casamientos y eventos en Buenos Aires | El Banquete Gastronómico',
   description:
-    'El Banquete Gastronómico ofrece servicio de catering premium para casamientos, eventos corporativos y fiestas privadas en Buenos Aires. Atención personalizada, menús a medida y experiencias gastronómicas únicas en Quinta Pepe Reina y otras locaciones.',
+    'El Banquete Gastronómico ofrece servicio de catering premium para casamientos, eventos corporativos y fiestas privadas en Buenos Aires. Atención personalizada, menús a medida y experiencias gastronómicas únicas en Espacio El Banquete y otras locaciones.',
   keywords: [
     'catering para casamientos',
     'eventos corporativos Buenos Aires',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     'servicio gastronómico',
     'catering Buenos Aires',
     'El Banquete Gastronómico',
-    'Quinta Pepe Reina',
+    'Espacio El Banquete',
   ],
   openGraph: {
     title: 'El Banquete Gastronómico | Catering Premium Buenos Aires',

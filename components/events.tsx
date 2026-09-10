@@ -23,6 +23,8 @@ const rowTwo = [
   { src: "/Fotos/IMG_1881.jpg", alt: "Cocktail y bar — El Banquete", aspectRatio: 3024 / 4032 },
   { src: "/Fotos/IMG_9515.jpg", alt: "Preparación gourmet — El Banquete", aspectRatio: 5472 / 3648 },
   { src: "/Fotos/papas-01.jpeg", alt: "Banquete de autor — El Banquete Gastronómico", aspectRatio: 3024 / 4032 },
+  { src: "/Fotos/nueva2.jpeg", alt: "Recepción de lujo — El Banquete Gastronómico", aspectRatio: 1280 / 853 },
+  { src: "/Fotos/nueva1.jpeg", alt: "Recepción de lujo — El Banquete Gastronómico", aspectRatio: 3024 / 4032 },
 ]
 
 function GalleryRow({
@@ -71,7 +73,7 @@ export default function Events() {
   return (
     <section id="eventos" className="py-20 md:py-32 bg-background overflow-hidden">
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 mb-14">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 mb-12 md:mb-16">
         <p className="text-xs tracking-wide-xl uppercase text-muted-foreground mb-4 font-sans">
           Nuestros eventos
         </p>
@@ -98,6 +100,75 @@ export default function Events() {
         height="clamp(160px, 24vw, 400px)"
         duration="45s"
       />
+
+      {/* 2 Tipos de Eventos — Abajo de la galería, espaciados, compactos y con efecto hover */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 mt-16 md:mt-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
+          {/* Tarjeta 1: Sociales */}
+          <div className="group relative p-7 md:p-9 border border-border bg-card/30 hover:bg-muted/40 hover:border-foreground/30 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between gap-4 mb-3">
+                <span className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground font-medium group-hover:text-foreground/80 transition-colors duration-200">
+                  01 · Celebraciones
+                </span>
+                <span className="font-sans text-[10px] tracking-wide-xl uppercase text-foreground/40 font-medium">
+                  Sociales
+                </span>
+              </div>
+              <h3 className="font-serif text-2xl md:text-3xl text-foreground leading-tight mb-3">
+                Eventos Sociales
+              </h3>
+              <p className="font-sans text-xs md:text-sm text-muted-foreground leading-relaxed">
+                Bodas, aniversarios, cumpleaños de 15 y celebraciones íntimas. Cuidamos cada detalle de la gastronomía y el servicio para que anfitriones e invitados solo se dediquen a disfrutar.
+              </p>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-border/50 flex flex-wrap gap-x-5 gap-y-2 font-sans text-xs text-foreground/75">
+              <span className="flex items-center gap-1.5 transition-colors duration-200 group-hover:text-foreground">
+                <span className="text-foreground/30 font-light select-none group-hover:text-foreground/60 transition-colors duration-200">—</span> Bodas & casamientos
+              </span>
+              <span className="flex items-center gap-1.5 transition-colors duration-200 group-hover:text-foreground">
+                <span className="text-foreground/30 font-light select-none group-hover:text-foreground/60 transition-colors duration-200">—</span> Cumpleaños & 15
+              </span>
+              <span className="flex items-center gap-1.5 transition-colors duration-200 group-hover:text-foreground">
+                <span className="text-foreground/30 font-light select-none group-hover:text-foreground/60 transition-colors duration-200">—</span> Encuentros privados
+              </span>
+            </div>
+          </div>
+
+          {/* Tarjeta 2: Corporativos */}
+          <div className="group relative p-7 md:p-9 border border-border bg-card/30 hover:bg-muted/40 hover:border-foreground/30 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between gap-4 mb-3">
+                <span className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground font-medium group-hover:text-foreground/80 transition-colors duration-200">
+                  02 · Empresas & Marcas
+                </span>
+                <span className="font-sans text-[10px] tracking-wide-xl uppercase text-foreground/40 font-medium">
+                  Corporativos
+                </span>
+              </div>
+              <h3 className="font-serif text-2xl md:text-3xl text-foreground leading-tight mb-3">
+                Eventos Corporativos
+              </h3>
+              <p className="font-sans text-xs md:text-sm text-muted-foreground leading-relaxed">
+                Lanzamientos de producto, fiestas de fin de año, cocktails y jornadas de trabajo. Puntualidad milimétrica, logística integral y un estándar profesional que potencia la imagen de tu empresa.
+              </p>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-border/50 flex flex-wrap gap-x-5 gap-y-2 font-sans text-xs text-foreground/75">
+              <span className="flex items-center gap-1.5 transition-colors duration-200 group-hover:text-foreground">
+                <span className="text-foreground/30 font-light select-none group-hover:text-foreground/60 transition-colors duration-200">—</span> Fiestas de fin de año
+              </span>
+              <span className="flex items-center gap-1.5 transition-colors duration-200 group-hover:text-foreground">
+                <span className="text-foreground/30 font-light select-none group-hover:text-foreground/60 transition-colors duration-200">—</span> Lanzamientos de marca
+              </span>
+              <span className="flex items-center gap-1.5 transition-colors duration-200 group-hover:text-foreground">
+                <span className="text-foreground/30 font-light select-none group-hover:text-foreground/60 transition-colors duration-200">—</span> Cocktails & networking
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

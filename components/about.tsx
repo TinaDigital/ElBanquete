@@ -17,7 +17,7 @@ export default function About() {
             </h2>
             <p className="mt-8 text-base text-muted-foreground leading-relaxed font-sans max-w-md">
               Somos un servicio gastronómico especializado en eventos sociales y corporativos.
-              Trabajamos tanto en <strong className="text-foreground font-normal">Quinta Pepe Reina</strong> como
+              Trabajamos tanto en <strong className="text-foreground font-normal">Espacio El Banquete</strong> como
               en cualquier espacio que elijas, llevando la misma calidad y atención al detalle
               a cada celebración.
             </p>
@@ -42,7 +42,7 @@ export default function About() {
                 Nuestra sede
               </p>
               <p className="font-serif text-base text-foreground">
-                Quinta Pepe Reina — Buenos Aires
+                Espacio El Banquete — Buenos Aires
               </p>
               <p className="font-sans text-xs text-muted-foreground mt-1">
                 También operamos en cualquier locación

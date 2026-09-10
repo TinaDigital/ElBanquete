@@ -372,3 +372,22 @@
     transparent 100%
   );
 }
+
+/* ─── Luxury thin scrollbar for menu panel ─── */
+.menu-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: oklch(0.75 0 0) transparent;
+}
+.menu-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.menu-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.menu-scrollbar::-webkit-scrollbar-thumb {
+  background: oklch(0.80 0 0);
+}
+.menu-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.50 0 0);
+}
+

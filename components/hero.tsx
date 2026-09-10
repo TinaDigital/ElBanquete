@@ -30,7 +30,7 @@ export default function Hero() {
           </h1>
           <p className="mt-6 font-sans text-base text-white/55 max-w-md leading-relaxed animate-hero-fade-up delay-600">
             Un servicio gastronómico premium para eventos de todo tipo,
-            en Quinta Pepe Reina o en la locación que elijas.
+            en Espacio El Banquete o en la locación que elijas.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-5 animate-hero-fade-up delay-800">
             <a
