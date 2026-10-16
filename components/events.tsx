@@ -18,7 +18,7 @@ const rowOne = [
 const rowTwo = [
   { src: "/Fotos/26431c47-a5f9-446e-8bfe-8ab0a05a9df8.jpg", alt: "Cocina premium — El Banquete", aspectRatio: 1280 / 853 },
   { src: "/Fotos/b6096c4a-eb94-4958-ab75-3807233970cb.jpg", alt: "Brindis de boda — El Banquete Gastronómico", aspectRatio: 3024 / 4032 },
-  { src: "/Fotos/b6f899dd-1b58-4455-a645-6f40c159f411.jpg", alt: "Plato de autor — El Banquete", aspectRatio: 1280 / 853 },
+  { src: "/Fotos/fiambres.jpg", alt: "Plato de autor — El Banquete", aspectRatio: 1280 / 853 },
   { src: "/Fotos/c9c2f2b7-c284-471b-91e0-76a703dffe90.jpg", alt: "Detalle de mesa — El Banquete Gastronómico", aspectRatio: 1280 / 853 },
   { src: "/Fotos/IMG_1881.jpg", alt: "Cocktail y bar — El Banquete", aspectRatio: 3024 / 4032 },
   { src: "/Fotos/IMG_9515.jpg", alt: "Preparación gourmet — El Banquete", aspectRatio: 5472 / 3648 },

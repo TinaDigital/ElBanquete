@@ -31,11 +31,11 @@ export const MENUS_DATA: Record<string, MenuData> = {
     pdfUrl: "/Menus/MENU%20CRIOLLO%20CLASICO_EL%20BANQUETE.pdf",
     images: [
       {
-        src: "/Fotos/parrilla-01.jpeg",
+        src: "/Fotos/criollo-c2.jpg",
         caption: "Asado a la cruz y leña de quebracho",
       },
       {
-        src: "/Fotos/mesas-01.jpeg",
+        src: "/Fotos/criollo-c1.jpg",
         caption: "Ambientación y vajilla de campo",
       },
     ],
@@ -88,11 +88,11 @@ export const MENUS_DATA: Record<string, MenuData> = {
     pdfUrl: "/Menus/MENU%20CRIOLLO%20PREMIUM_EL%20BANQUETE.pdf",
     images: [
       {
-        src: "/Fotos/asado-01.jpeg",
+        src: "/Fotos/fiambres.jpg",
         caption: "Costillar y vacío al asador criollo",
       },
       {
-        src: "/Fotos/parrilla-02.jpeg",
+        src: "/Fotos/asado.jpg",
         caption: "Cocción lenta a fuego vivo de leña",
       },
     ],
@@ -155,11 +155,11 @@ export const MENUS_DATA: Record<string, MenuData> = {
     pdfUrl: "/Menus/MENU%20FINGER%20FOOD%20CLASICO_EL%20BANQUETE.pdf",
     images: [
       {
-        src: "/Fotos/fingerfood-01.jpeg",
+        src: "/Fotos/fingerfood-c1.jpg",
         caption: "Pernil braseado 15 horas fileteado a la vista",
       },
       {
-        src: "/Fotos/fingerfood-02.jpeg",
+        src: "/Fotos/fingerfood-c2.jpg",
         caption: "Servicio dinámico de bandejeo gourmet",
       },
     ],
@@ -211,11 +211,11 @@ export const MENUS_DATA: Record<string, MenuData> = {
     pdfUrl: "/Menus/MENU%20FINGER%20FOOD%20GOURMET_EL%20BANQUETE.pdf",
     images: [
       {
-        src: "/Fotos/sushi-01.jpeg",
+        src: "/Fotos/fingerfood-g1.jpg",
         caption: "Estaciones culinarias y bocados de autor",
       },
       {
-        src: "/Fotos/bruschettas-01.jpeg",
+        src: "/Fotos/fingerfood-g2.jpg",
         caption: "Bruschettas artesanales y variedad de mar",
       },
     ],
@@ -278,11 +278,11 @@ export const MENUS_DATA: Record<string, MenuData> = {
     pdfUrl: "/Menus/MENU%20FORMAL%20AL%20PLATO_EL%20BANQUETE.pdf",
     images: [
       {
-        src: "/Fotos/postre-02.jpeg",
+        src: "/Fotos/formal-1.jpg",
         caption: "Servicio formal de gala emplatado en mesa",
       },
       {
-        src: "/Fotos/postre-03.jpeg",
+        src: "/Fotos/formal-2.jpg",
         caption: "Patisserie de autor y gran buffet dulce",
       },
     ],
@@ -340,3 +340,62 @@ export const MENUS_DATA: Record<string, MenuData> = {
 };
 
 export const MENUS_LIST = Object.values(MENUS_DATA);
+
+export interface CorporateMenuItem {
+  num: string;
+  tagline: string;
+  title: string;
+  description: string;
+  image: string;
+}
+
+export const CORPORATE_MENUS: CorporateMenuItem[] = [
+  {
+    num: "01",
+    tagline: "JORNADAS & PAUSAS",
+    title: "Coffee Break",
+    description:
+      "Una pausa práctica y distendida para acompañar reuniones, capacitaciones y jornadas de trabajo. Opciones dulces y saladas, infusiones y bebidas, adaptadas a la duración y dinámica de cada encuentro.",
+    image: "/Fotos/postre-01.jpeg",
+  },
+  {
+    num: "02",
+    tagline: "ENCUENTROS MATUTINOS",
+    title: "Desayuno de Trabajo",
+    description:
+      "Una propuesta completa para comenzar reuniones, presentaciones o encuentros corporativos. Combinamos cafetería, jugos y una selección de opciones dulces y saladas, con un servicio ágil y cuidado.",
+    image: "/Fotos/bruschettas-01.jpeg",
+  },
+  {
+    num: "03",
+    tagline: "DINÁMICO & SOCIAL",
+    title: "Menús Finger Food",
+    description:
+      "Variedad de pequeñas preparaciones frías y calientes pensadas para comer de manera cómoda y dinámica, sin necesidad de un servicio formal de mesa. Ideal para reuniones, lanzamientos, celebraciones y eventos corporativos.",
+    image: "/Fotos/fingerfood-01.jpeg",
+  },
+  {
+    num: "04",
+    tagline: "NETWORKING & ALTA GAMA",
+    title: "Cocktail",
+    description:
+      "Una propuesta más completa y sofisticada, con bocados fríos y calientes servidos durante el evento. Permite que los invitados circulen e interactúen mientras disfrutan de un servicio gastronómico continuo.",
+    image: "/Fotos/sushi-01.jpeg",
+  },
+  {
+    num: "05",
+    tagline: "EQUIPOS & NEGOCIOS",
+    title: "Almuerzos",
+    description:
+      "Menús especialmente diseñados para almuerzos empresariales, reuniones de equipos, jornadas de trabajo y encuentros con clientes. Diferentes alternativas de menú y modalidad de servicio según cada ocasión.",
+    image: "/Fotos/parrilla-01.jpeg",
+  },
+  {
+    num: "06",
+    tagline: "GALA & INSTITUCIONAL",
+    title: "Cenas Formales",
+    description:
+      "Una experiencia gastronómica de estilo formal, con servicio de mesa y menú desarrollado en diferentes pasos. Ideal para cenas institucionales, agasajos, aniversarios y eventos empresariales que requieren una presentación más elegante.",
+    image: "/Fotos/formal-1.jpg",
+  },
+];

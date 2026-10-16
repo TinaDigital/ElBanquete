@@ -1,18 +1,30 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import Image from "next/image"
-import { MENUS_DATA, MENUS_LIST, type MenuData } from "@/lib/menus-data"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useIsMobile } from "@/hooks/use-mobile"
+import { CardSwap, Card, type CardSwapHandle } from "@/components/ui/card-swap"
+import {
+  MENUS_DATA,
+  MENUS_LIST,
+  CORPORATE_MENUS,
+  type MenuData,
+  type CorporateMenuItem,
+} from "@/lib/menus-data"
 
 export { MENUS_DATA, MENUS_LIST, type MenuData }
 
 export default function Menus() {
+  const isMobile = useIsMobile()
   const [selectedId, setSelectedId] = useState<string>(MENUS_LIST[0].id)
   const [activePhotoIdx, setActivePhotoIdx] = useState<number>(0)
   const [isFading, setIsFading] = useState<boolean>(false)
   const [mobileExpandedId, setMobileExpandedId] = useState<string | null>(
     MENUS_LIST[0].id
   )
+  const [activeCorpIdx, setActiveCorpIdx] = useState<number>(0)
+  const cardSwapRef = useRef<CardSwapHandle>(null)
 
   function handleSelectMenu(id: string) {
     if (id === selectedId) return
@@ -45,19 +57,28 @@ export default function Menus() {
     <section id="menus" className="py-24 md:py-36 bg-background">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header editorial */}
-        <div className="mb-12 md:mb-16">
+        <div className="mb-10 md:mb-14">
           <p className="text-xs tracking-wide-xl uppercase text-muted-foreground mb-4 font-sans">
             Propuesta gastronómica
           </p>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight text-balance">
-            5 menús,
+            Nuestras opciones
             <br />
-            <em className="italic font-light">un solo estándar.</em>
+            <em className="italic font-light">de menús.</em>
           </h2>
           <p className="mt-4 font-sans text-sm text-muted-foreground max-w-xl leading-relaxed">
             Una secuencia culinaria cronológica pensada para acompañar cada momento de
             tu celebración, desde la recepción hasta el trasnoche.
           </p>
+        </div>
+
+        {/* Solapita identificatoria: Menúes para eventos sociales */}
+        <div className="flex items-center gap-3 mb-6">
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 border border-border bg-card text-foreground font-sans text-xs tracking-wide-xl uppercase font-medium">
+            <span className="w-1.5 h-1.5 rounded-full bg-foreground" />
+            Menúes para eventos sociales
+          </div>
+          <div className="h-px bg-border flex-1" />
         </div>
 
         {/* ─── Desktop: Altura fija unificada (600px) que NUNCA salta ni cambia de tamaño al alternar menús ─── */}
@@ -560,6 +581,180 @@ export default function Menus() {
               </div>
             )
           })}
+        </div>
+
+        {/* Solapita identificatoria: Menúes para eventos corporativos */}
+        <div className="mt-20 md:mt-28 mb-10 md:mb-14">
+          <div className="flex items-center gap-3">
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 border border-border bg-card text-foreground font-sans text-xs tracking-wide-xl uppercase font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-foreground" />
+              Menúes para eventos corporativos
+            </div>
+            <div className="h-px bg-border flex-1" />
+          </div>
+        </div>
+
+        {/* Sección Corporativa: Formato split 2 columnas (Texto a la izquierda, Tarjetas 3D a la derecha) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* Columna Izquierda: Información Editorial y CTA */}
+          <div className="lg:col-span-5 flex flex-col justify-center text-left">
+            <p className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground mb-3">
+              Propuesta Empresas & Marcas
+            </p>
+            <h3 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground leading-[1.15] mb-5">
+              Formatos gastronómicos
+              <br />
+              <em className="italic font-light">a medida.</em>
+            </h3>
+            <p className="font-sans text-xs sm:text-sm text-muted-foreground leading-relaxed mb-6">
+              Deslizá o arrastrá las tarjetas para descubrir nuestras propuestas para empresas, reuniones, presentaciones de producto y eventos institucionales.
+            </p>
+
+            <div className="p-4 border-l-2 border-foreground/30 bg-muted/20 mb-8">
+              <p className="font-sans text-xs text-muted-foreground leading-relaxed">
+                Cada propuesta puede personalizarse según el tipo de evento, cantidad de invitados, locación, duración y requerimientos de la empresa.
+              </p>
+            </div>
+
+            <div>
+              <a
+                href="https://wa.me/5491157826089?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20propuesta%20corporativa%20personalizada%20para%20mi%20empresa."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary btn-primary-dark py-3.5 px-7 text-xs font-sans tracking-wide-xl uppercase inline-flex items-center justify-center gap-2"
+              >
+                <span>Cotizar Evento Corporativo</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Columna Derecha: Tarjetas 3D sin blur y Controles */}
+          <div className="lg:col-span-7 flex flex-col items-center justify-center">
+            <div className="w-full max-w-[340px] sm:max-w-md lg:max-w-xl h-[495px] md:h-[530px] flex items-center justify-center my-2">
+              <CardSwap
+                key={isMobile ? "corp-mob" : "corp-desk"}
+                ref={cardSwapRef}
+                width={isMobile ? 330 : 460}
+                height={isMobile ? 450 : 440}
+                cardDistance={isMobile ? 8 : 28}
+                verticalDistance={isMobile ? 14 : 22}
+                depth={isMobile ? 25 : 45}
+                skewAmount={isMobile ? 1 : 2}
+                visibleCards={isMobile ? 3 : 4}
+                delay={4500}
+                autoplay={true}
+                pauseOnHover={true}
+                draggable={true}
+                speed={1.1}
+                bounce={0.25}
+                parallax={0.3}
+                hoverSpread={0.07}
+                dim={0}
+                cardRadius={14}
+                theme="light"
+                onChange={(index) => setActiveCorpIdx(index)}
+                className="h-full w-full"
+              >
+                {CORPORATE_MENUS.map((corp) => (
+                  <Card
+                    key={corp.num}
+                    className="border border-border bg-card overflow-hidden flex flex-col justify-between shadow-2xl text-left"
+                  >
+                    {/* Cabecera con imagen real - 100% nítida, sin blur */}
+                    <div className="relative h-[195px] md:h-[210px] w-full overflow-hidden bg-secondary shrink-0">
+                      <Image
+                        src={corp.image}
+                        alt={corp.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 340px, 480px"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
+
+                      <div className="absolute top-3.5 left-4 right-4 flex items-center justify-between">
+                        <span className="px-2.5 py-1 bg-black/75 text-white font-sans text-[10px] tracking-wide-xl uppercase">
+                          {corp.num} · Formato
+                        </span>
+                        <span className="text-[10px] font-sans tracking-wide-xl uppercase text-white/90 font-medium">
+                          {corp.tagline}
+                        </span>
+                      </div>
+
+                      <div className="absolute bottom-3 left-4 right-4">
+                        <h4 className="font-serif text-2xl sm:text-3xl text-white leading-tight">
+                          {corp.title}
+                        </h4>
+                      </div>
+                    </div>
+
+                    {/* Cuerpo de la tarjeta */}
+                    <div className="p-4 sm:p-5 md:p-6 flex-1 flex flex-col justify-between bg-card">
+                      <p className="font-sans text-xs sm:text-sm text-foreground/85 leading-relaxed">
+                        {corp.description}
+                      </p>
+
+                      <div className="pt-3 mt-3 border-t border-border flex items-center justify-between">
+                        <span className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground">
+                          Servicio corporativo
+                        </span>
+                        <span className="font-sans text-xs font-medium text-foreground">
+                          Propuesta a medida
+                        </span>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </CardSwap>
+            </div>
+
+            {/* Controles y paginación con título interactivo */}
+            <div className="flex flex-col items-center gap-2.5 mt-5">
+              <div className="flex items-center justify-center gap-4">
+                <button
+                  type="button"
+                  onClick={() => cardSwapRef.current?.prev()}
+                  aria-label="Formato anterior"
+                  className="w-9 h-9 border border-border bg-background hover:bg-foreground hover:text-primary-foreground flex items-center justify-center transition-colors cursor-pointer"
+                >
+                  <ChevronLeft size={16} />
+                </button>
+
+                {/* Dots / Indicadores de las 6 cartas */}
+                <div className="flex items-center gap-1.5 px-2">
+                  {CORPORATE_MENUS.map((corpItem, i) => (
+                    <span
+                      key={corpItem.num}
+                      title={corpItem.title}
+                      className={`h-1.5 transition-all duration-300 rounded-full ${
+                        activeCorpIdx === i
+                          ? "w-7 bg-foreground"
+                          : "w-1.5 bg-foreground/20"
+                      }`}
+                    />
+                  ))}
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => cardSwapRef.current?.next()}
+                  aria-label="Siguiente formato"
+                  className="w-9 h-9 border border-border bg-background hover:bg-foreground hover:text-primary-foreground flex items-center justify-center transition-colors cursor-pointer"
+                >
+                  <ChevronRight size={16} />
+                </button>
+              </div>
+
+              {/* Indicador de formato actual */}
+              <p className="font-sans text-[11px] tracking-wide-xl uppercase text-muted-foreground">
+                {CORPORATE_MENUS[activeCorpIdx]?.num} de 06 —{" "}
+                <span className="text-foreground font-medium">
+                  {CORPORATE_MENUS[activeCorpIdx]?.title}
+                </span>
+              </p>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>

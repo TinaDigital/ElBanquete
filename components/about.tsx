@@ -23,30 +23,58 @@ export default function About() {
             </p>
 
             <div className="mt-10 h-px bg-border w-24" />
-            <p className="mt-6 font-serif text-xl italic text-foreground/40">
-              Un servicio a la altura de tu evento.
+            <p className="mt-6 font-serif text-xl md:text-2xl text-foreground font-medium">
+              Nuestro espacio
             </p>
           </div>
 
           {/* Image */}
           <div className="relative h-[440px] md:h-[520px]">
             <Image
-              src="/Fotos/sushigrande.jpeg"
+              src="/Fotos/quienes_somos.jpg"
               alt="El Banquete — preparación gastronómica"
               fill
               className="object-cover"
             />
             {/* Floating note */}
-            <div className="absolute bottom-6 left-6 right-6 bg-background p-5">
-              <p className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground mb-1">
+            <div className="absolute bottom-6 left-6 right-6 bg-background/95 backdrop-blur-xs p-5 border border-border shadow-xs">
+              <p className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground mb-1.5">
                 Nuestra sede
               </p>
-              <p className="font-serif text-base text-foreground">
-                Espacio El Banquete — Buenos Aires
+              <p className="font-serif text-base md:text-lg text-foreground leading-snug">
+                Tenemos una hectárea propia a disposición del evento que quieras realizar
               </p>
-              <p className="font-sans text-xs text-muted-foreground mt-1">
-                También operamos en cualquier locación
-              </p>
+              <div className="mt-3.5 pt-3 border-t border-border flex items-center justify-between">
+                <a
+                  href="https://maps.app.goo.gl/zYM3LsBvBpJQYtKv9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-sans text-foreground hover:opacity-75 transition-opacity font-medium"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.75"
+                    className="w-3.5 h-3.5 text-foreground shrink-0"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                    />
+                  </svg>
+                  <span>Ver en Google Maps</span>
+                  <span className="text-[11px] text-muted-foreground">↗</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

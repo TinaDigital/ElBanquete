@@ -18,7 +18,10 @@ export default function Contact() {
                 <em className="italic font-light">en mente?</em>
               </h2>
               <p className="mt-6 font-sans text-sm text-muted-foreground leading-relaxed max-w-sm">
-                Contanos tu fecha, el espacio y la cantidad de personas. Te armamos una propuesta a medida.
+                Contanos tu fecha, el espacio y la cantidad de invitados.{" "}
+                <strong className="font-semibold text-foreground">
+                  Te armamos una propuesta a medida.
+                </strong>
               </p>
             </div>
 
@@ -145,7 +148,7 @@ export default function Contact() {
               <div className="absolute bottom-[10%] left-[8%] w-[38%] h-[40%] rotate-[6deg] transition-all duration-500 hover:rotate-0 hover:scale-105 hover:z-40 hover:shadow-2xl shadow-lg border-[6px] border-white bg-white">
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
-                    src="/Fotos/3abac21d-d23f-4438-be45-98cd73dfd5b1.jpg"
+                    src="/Fotos/fingerfood-g2.jpg"
                     alt="Gourmet detail"
                     fill
                     className="object-cover"

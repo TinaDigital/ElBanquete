@@ -92,10 +92,10 @@ export default function Navbar() {
           <Image
             src={scrolled || mobileOpen ? "/Logos/LOGO BANQUETE3.png" : "/Logos/LOGO BANQUETE1.png"}
             alt="El Banquete Gastronómico"
-            width={220}
-            height={220}
+            width={240}
+            height={240}
             priority
-            className="h-16 md:h-20 w-auto object-contain transition-all duration-500"
+            className="h-20 md:h-24 w-auto object-contain transition-all duration-500"
           />
         </a>
 
