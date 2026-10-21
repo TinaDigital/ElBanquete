@@ -128,11 +128,23 @@ export default function Footer() {
             <span>Buenos Aires, Argentina</span>
             <button
               onClick={scrollToTop}
-              className="hover:text-white transition-colors flex items-center gap-1 cursor-pointer"
+              className="hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"
               aria-label="Volver arriba"
             >
               <span>Volver arriba</span>
-              <span>↑</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-3 h-3"
+                aria-hidden="true"
+              >
+                <path d="m18 15-6-6-6 6" />
+              </svg>
             </button>
           </div>
         </div>

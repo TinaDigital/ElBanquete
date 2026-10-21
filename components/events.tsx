@@ -43,10 +43,12 @@ function GalleryRow({
   return (
     <div className="relative w-full overflow-hidden" style={{ height }}>
       <div
-        className="flex gap-3 absolute top-0 left-0 h-full"
+        className="flex gap-3 absolute top-0 left-0 h-full will-change-transform"
         style={{
           animation: `marquee-${direction} ${duration} linear infinite`,
           width: "max-content",
+          transform: "translate3d(0, 0, 0)",
+          willChange: "transform",
         }}
       >
         {doubled.map((photo, i) => (

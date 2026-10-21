@@ -8,7 +8,7 @@ export default function Hero() {
           loop
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
           className="w-full h-full object-cover animate-hero-image"
         >
           <source src="/IMG_6462 (1).mp4" type="video/mp4" />
