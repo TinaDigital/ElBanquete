@@ -650,7 +650,7 @@ export default function Menus() {
 
                       <div className="absolute top-3.5 left-4 right-4 flex items-center justify-between">
                         <span className="px-2.5 py-1 bg-black/75 text-white font-sans text-[10px] tracking-wide-xl uppercase">
-                          {corp.num} · Formato
+                          {corp.num}
                         </span>
                         <span className="text-[10px] font-sans tracking-wide-xl uppercase text-white/90 font-medium">
                           {corp.tagline}
@@ -673,9 +673,6 @@ export default function Menus() {
                       <div className="pt-3 mt-3 border-t border-border flex items-center justify-between">
                         <span className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground">
                           Servicio corporativo
-                        </span>
-                        <span className="font-sans text-xs font-medium text-foreground">
-                          Propuesta a medida
                         </span>
                       </div>
                     </div>
