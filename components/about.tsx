@@ -37,19 +37,19 @@ export default function About() {
               className="object-cover"
             />
             {/* Floating note */}
-            <div className="absolute bottom-6 left-6 right-6 bg-background/95 backdrop-blur-xs p-5 border border-border shadow-xs">
-              <p className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground mb-1.5">
+            <div className="absolute bottom-3.5 left-3.5 right-3.5 sm:bottom-5 sm:left-5 sm:right-5 bg-background/95 backdrop-blur-xs p-3.5 sm:p-4 md:p-5 border border-border shadow-xs">
+              <p className="font-sans text-[9px] sm:text-[10px] tracking-wide-xl uppercase text-muted-foreground mb-1 sm:mb-1.5">
                 Nuestra sede
               </p>
-              <p className="font-serif text-base md:text-lg text-foreground leading-snug">
+              <p className="font-serif text-[13px] sm:text-sm md:text-base lg:text-lg text-foreground leading-snug">
                 Tenemos una hectárea propia a disposición del evento que quieras realizar
               </p>
-              <div className="mt-3.5 pt-3 border-t border-border flex items-center justify-between">
+              <div className="mt-2.5 pt-2 sm:mt-3 sm:pt-2.5 md:mt-3.5 md:pt-3 border-t border-border flex items-center justify-between">
                 <a
                   href="https://maps.app.goo.gl/zYM3LsBvBpJQYtKv9"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-sans text-foreground hover:opacity-75 transition-opacity font-medium"
+                  className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-sans text-foreground hover:opacity-75 transition-opacity font-medium"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ export default function About() {
                     />
                   </svg>
                   <span>Ver en Google Maps</span>
-                  <span className="text-[11px] text-muted-foreground">↗</span>
+                  <span className="text-[10px] sm:text-[11px] text-muted-foreground">↗</span>
                 </a>
               </div>
             </div>
