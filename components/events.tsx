@@ -7,11 +7,11 @@ const rowOne = [
   { src: "/Fotos/292.jpg", alt: "Celebración especial — El Banquete Gastronómico", aspectRatio: 5440 / 3631 },
   { src: "/Fotos/681b5c51-6c7f-4df4-a49b-522954f61d2b.jpg", alt: "Banquete premium — El Banquete Gastronómico", aspectRatio: 3024 / 4032 },
   { src: "/Fotos/52284eb1-c9fd-4d0f-a7f2-c02ef04cb717.jpg", alt: "Servicio exclusivo — El Banquete", aspectRatio: 1280 / 853 },
-  { src: "/Fotos/fingerfood-01.jpeg", alt: "Finger food — El Banquete", aspectRatio: 3024 / 4032 },
-  { src: "/Fotos/postre-02.jpeg", alt: "Postres de autor — El Banquete Gastronómico", aspectRatio: 3024 / 4032 },
-  { src: "/Fotos/sushi-01.jpeg", alt: "Sushi y rolls — El Banquete", aspectRatio: 3024 / 4032 },
-  { src: "/Fotos/recepcion-01.jpeg", alt: "Recepción de lujo — El Banquete Gastronómico", aspectRatio: 3024 / 4032 },
-  { src: "/Fotos/postre-03.jpeg", alt: "Cheesecake premium — El Banquete", aspectRatio: 3024 / 4032 },
+  { src: "/Fotos/fingerfood-01.jpg", alt: "Finger food — El Banquete", aspectRatio: 3024 / 4032 },
+  { src: "/Fotos/postre-02.jpg", alt: "Postres de autor — El Banquete Gastronómico", aspectRatio: 3024 / 4032 },
+  { src: "/Fotos/sushi-01.jpg", alt: "Sushi y rolls — El Banquete", aspectRatio: 3024 / 4032 },
+  { src: "/Fotos/recepcion-01.jpg", alt: "Recepción de lujo — El Banquete Gastronómico", aspectRatio: 3024 / 4032 },
+  { src: "/Fotos/postre-03.jpg", alt: "Cheesecake premium — El Banquete", aspectRatio: 3024 / 4032 },
 ]
 
 
@@ -22,9 +22,9 @@ const rowTwo = [
   { src: "/Fotos/c9c2f2b7-c284-471b-91e0-76a703dffe90.jpg", alt: "Detalle de mesa — El Banquete Gastronómico", aspectRatio: 1280 / 853 },
   { src: "/Fotos/IMG_1881.jpg", alt: "Cocktail y bar — El Banquete", aspectRatio: 3024 / 4032 },
   { src: "/Fotos/IMG_9515.jpg", alt: "Preparación gourmet — El Banquete", aspectRatio: 5472 / 3648 },
-  { src: "/Fotos/papas-01.jpeg", alt: "Banquete de autor — El Banquete Gastronómico", aspectRatio: 3024 / 4032 },
-  { src: "/Fotos/nueva2.jpeg", alt: "Recepción de lujo — El Banquete Gastronómico", aspectRatio: 1280 / 853 },
-  { src: "/Fotos/nueva1.jpeg", alt: "Recepción de lujo — El Banquete Gastronómico", aspectRatio: 3024 / 4032 },
+  { src: "/Fotos/papas-01.jpg", alt: "Banquete de autor — El Banquete Gastronómico", aspectRatio: 3024 / 4032 },
+  { src: "/Fotos/nueva2.jpg", alt: "Recepción de lujo — El Banquete Gastronómico", aspectRatio: 1280 / 853 },
+  { src: "/Fotos/nueva1.jpg", alt: "Recepción de lujo — El Banquete Gastronómico", aspectRatio: 3024 / 4032 },
 ]
 
 function GalleryRow({

@@ -356,7 +356,7 @@ export const CORPORATE_MENUS: CorporateMenuItem[] = [
     title: "Coffee Break",
     description:
       "Una pausa práctica y distendida para acompañar reuniones, capacitaciones y jornadas de trabajo. Opciones dulces y saladas, infusiones y bebidas, adaptadas a la duración y dinámica de cada encuentro.",
-    image: "/Fotos/postre-01.jpeg",
+    image: "/Fotos/postre-01.jpg",
   },
   {
     num: "02",
@@ -364,7 +364,7 @@ export const CORPORATE_MENUS: CorporateMenuItem[] = [
     title: "Desayuno de Trabajo",
     description:
       "Una propuesta completa para comenzar reuniones, presentaciones o encuentros corporativos. Combinamos cafetería, jugos y una selección de opciones dulces y saladas, con un servicio ágil y cuidado.",
-    image: "/Fotos/bruschettas-01.jpeg",
+    image: "/Fotos/bruschettas-01.jpg",
   },
   {
     num: "03",
@@ -372,7 +372,7 @@ export const CORPORATE_MENUS: CorporateMenuItem[] = [
     title: "Menús Finger Food",
     description:
       "Variedad de pequeñas preparaciones frías y calientes pensadas para comer de manera cómoda y dinámica, sin necesidad de un servicio formal de mesa. Ideal para reuniones, lanzamientos, celebraciones y eventos corporativos.",
-    image: "/Fotos/fingerfood-01.jpeg",
+    image: "/Fotos/fingerfood-01.jpg",
   },
   {
     num: "04",
@@ -380,7 +380,7 @@ export const CORPORATE_MENUS: CorporateMenuItem[] = [
     title: "Cocktail",
     description:
       "Una propuesta más completa y sofisticada, con bocados fríos y calientes servidos durante el evento. Permite que los invitados circulen e interactúen mientras disfrutan de un servicio gastronómico continuo.",
-    image: "/Fotos/sushi-01.jpeg",
+    image: "/Fotos/sushi-01.jpg",
   },
   {
     num: "05",
@@ -388,7 +388,7 @@ export const CORPORATE_MENUS: CorporateMenuItem[] = [
     title: "Almuerzos",
     description:
       "Menús especialmente diseñados para almuerzos empresariales, reuniones de equipos, jornadas de trabajo y encuentros con clientes. Diferentes alternativas de menú y modalidad de servicio según cada ocasión.",
-    image: "/Fotos/parrilla-01.jpeg",
+    image: "/Fotos/parrilla-01.jpg",
   },
   {
     num: "06",
