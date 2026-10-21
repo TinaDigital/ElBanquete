@@ -2,14 +2,14 @@ import Image from "next/image"
 
 export default function Contact() {
   return (
-    <section id="contacto" className="bg-background py-24 md:py-36 border-t border-border overflow-hidden">
+    <section id="contacto" className="bg-background py-14 md:py-20 border-t border-border overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-center">
 
           {/* Left Column: Contact details and links */}
           <div className="md:col-span-6 lg:col-span-7">
             {/* Heading */}
-            <div className="mb-12">
+            <div className="mb-8 md:mb-10">
               <p className="font-sans text-xs tracking-wide-xl uppercase text-muted-foreground mb-5">
                 Contacto
               </p>
@@ -109,7 +109,7 @@ export default function Contact() {
               <div className="absolute top-[10%] left-[5%] w-[55%] h-[60%] rotate-[-4deg] transition-all duration-500 hover:rotate-0 hover:scale-105 hover:z-40 hover:shadow-2xl shadow-lg border-[6px] border-white bg-white">
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
-                    src="/Fotos/IMG_1881.jpg"
+                    src="/Fotos/contacto1.jpg"
                     alt="Celebración El Banquete"
                     fill
                     className="object-cover"
@@ -122,7 +122,7 @@ export default function Contact() {
               <div className="absolute top-[2%] right-[5%] w-[45%] h-[50%] rotate-[3deg] transition-all duration-500 hover:rotate-0 hover:scale-105 hover:z-40 hover:shadow-2xl shadow-lg border-[6px] border-white bg-white">
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
-                    src="/Fotos/b6096c4a-eb94-4958-ab75-3807233970cb.jpg"
+                    src="/Fotos/contacto2.jpg"
                     alt="Brindis de boda"
                     fill
                     className="object-cover"
@@ -135,7 +135,7 @@ export default function Contact() {
               <div className="absolute bottom-[5%] right-[10%] w-[50%] h-[50%] rotate-[-2deg] transition-all duration-500 hover:rotate-0 hover:scale-105 hover:z-40 hover:shadow-2xl shadow-lg border-[6px] border-white bg-white">
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
-                    src="/Fotos/pauyjuampi-800.jpg"
+                    src="/Fotos/contacto3.jpg"
                     alt="Pau y Juampi Boda"
                     fill
                     className="object-cover"
@@ -148,7 +148,7 @@ export default function Contact() {
               <div className="absolute bottom-[10%] left-[8%] w-[38%] h-[40%] rotate-[6deg] transition-all duration-500 hover:rotate-0 hover:scale-105 hover:z-40 hover:shadow-2xl shadow-lg border-[6px] border-white bg-white">
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
-                    src="/Fotos/fingerfood-g2.jpg"
+                    src="/Fotos/contacto4.jpg"
                     alt="Gourmet detail"
                     fill
                     className="object-cover"

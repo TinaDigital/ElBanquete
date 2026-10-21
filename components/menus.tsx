@@ -54,10 +54,10 @@ export default function Menus() {
   const step4 = activeMenu.steps.find((s) => s.step === "04")
 
   return (
-    <section id="menus" className="py-24 md:py-36 bg-background">
+    <section id="menus" className="py-14 md:py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header editorial */}
-        <div className="mb-10 md:mb-14">
+        <div className="mb-8 md:mb-10">
           <p className="text-xs tracking-wide-xl uppercase text-muted-foreground mb-4 font-sans">
             Propuesta gastronómica
           </p>
@@ -72,15 +72,6 @@ export default function Menus() {
           </p>
         </div>
 
-        {/* Solapita identificatoria: Menúes para eventos sociales */}
-        <div className="flex items-center gap-3 mb-6">
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 border border-border bg-card text-foreground font-sans text-xs tracking-wide-xl uppercase font-medium">
-            <span className="w-1.5 h-1.5 rounded-full bg-foreground" />
-            Menúes para eventos sociales
-          </div>
-          <div className="h-px bg-border flex-1" />
-        </div>
-
         {/* ─── Desktop: Altura fija unificada (600px) que NUNCA salta ni cambia de tamaño al alternar menús ─── */}
         <div className="hidden md:grid md:grid-cols-12 border border-border h-[600px] overflow-hidden">
           {/* 1. Selector Vertical Izquierdo (3 cols): 5 cajitas de altura idéntica */}
@@ -92,8 +83,8 @@ export default function Menus() {
                   key={m.id}
                   onClick={() => handleSelectMenu(m.id)}
                   className={`flex-1 w-full text-left px-6 lg:px-7 border-b border-border last:border-b-0 transition-all duration-200 group flex items-center justify-between gap-3 ${isSelected
-                      ? "bg-foreground text-primary-foreground font-medium"
-                      : "bg-background hover:bg-secondary/60 text-foreground"
+                    ? "bg-foreground text-primary-foreground font-medium"
+                    : "bg-background hover:bg-secondary/60 text-foreground"
                     }`}
                 >
                   <div className="flex items-center gap-3.5">
@@ -113,8 +104,8 @@ export default function Menus() {
 
                   <span
                     className={`h-px transition-all duration-200 ${isSelected
-                        ? "bg-white/60 w-5"
-                        : "bg-border group-hover:bg-foreground/40 w-3 group-hover:w-4"
+                      ? "bg-white/60 w-5"
+                      : "bg-border group-hover:bg-foreground/40 w-3 group-hover:w-4"
                       }`}
                   />
                 </button>
@@ -323,8 +314,8 @@ export default function Menus() {
                     key={idx}
                     onClick={() => setActivePhotoIdx(idx)}
                     className={`px-2 py-0.5 font-sans text-[9px] tracking-wide-xl uppercase transition-all duration-200 ${activePhotoIdx === idx
-                        ? "bg-white text-black font-semibold shadow-sm"
-                        : "text-white/70 hover:text-white hover:bg-white/10"
+                      ? "bg-white text-black font-semibold shadow-sm"
+                      : "text-white/70 hover:text-white hover:bg-white/10"
                       }`}
                   >
                     0{idx + 1}
@@ -365,8 +356,8 @@ export default function Menus() {
                 <button
                   onClick={() => handleToggleMobile(m.id)}
                   className={`w-full text-left px-5 py-5 flex items-center justify-between gap-4 transition-colors duration-200 ${isExpanded
-                      ? "bg-foreground text-primary-foreground"
-                      : "bg-background"
+                    ? "bg-foreground text-primary-foreground"
+                    : "bg-background"
                     }`}
                   aria-expanded={isExpanded}
                 >
@@ -392,8 +383,8 @@ export default function Menus() {
                     stroke="currentColor"
                     strokeWidth="1.5"
                     className={`w-4 h-4 shrink-0 transition-transform duration-300 ${isExpanded
-                        ? "rotate-180 text-white/60"
-                        : "text-muted-foreground"
+                      ? "rotate-180 text-white/60"
+                      : "text-muted-foreground"
                       }`}
                     aria-hidden="true"
                   >
@@ -583,22 +574,13 @@ export default function Menus() {
           })}
         </div>
 
-        {/* Solapita identificatoria: Menúes para eventos corporativos */}
-        <div className="mt-20 md:mt-28 mb-10 md:mb-14">
-          <div className="flex items-center gap-3">
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 border border-border bg-card text-foreground font-sans text-xs tracking-wide-xl uppercase font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-foreground" />
-              Menúes para eventos corporativos
-            </div>
-            <div className="h-px bg-border flex-1" />
-          </div>
-        </div>
+
 
         {/* Sección Corporativa: Formato split 2 columnas (Texto a la izquierda, Tarjetas 3D a la derecha) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center lg:mt-20">
           {/* Columna Izquierda: Información Editorial y CTA */}
           <div className="lg:col-span-5 flex flex-col justify-center text-left">
-            <p className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground mb-3">
+            <p className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground mb-3 mt-10">
               Propuesta Empresas & Marcas
             </p>
             <h3 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground leading-[1.15] mb-5">
@@ -607,14 +589,8 @@ export default function Menus() {
               <em className="italic font-light">a medida.</em>
             </h3>
             <p className="font-sans text-xs sm:text-sm text-muted-foreground leading-relaxed mb-6">
-              Deslizá o arrastrá las tarjetas para descubrir nuestras propuestas para empresas, reuniones, presentaciones de producto y eventos institucionales.
+              Cada propuesta puede personalizarse según el tipo de evento, cantidad de invitados, locación, duración y requerimientos de la empresa.
             </p>
-
-            <div className="p-4 border-l-2 border-foreground/30 bg-muted/20 mb-8">
-              <p className="font-sans text-xs text-muted-foreground leading-relaxed">
-                Cada propuesta puede personalizarse según el tipo de evento, cantidad de invitados, locación, duración y requerimientos de la empresa.
-              </p>
-            </div>
 
             <div>
               <a
@@ -726,11 +702,10 @@ export default function Menus() {
                     <span
                       key={corpItem.num}
                       title={corpItem.title}
-                      className={`h-1.5 transition-all duration-300 rounded-full ${
-                        activeCorpIdx === i
-                          ? "w-7 bg-foreground"
-                          : "w-1.5 bg-foreground/20"
-                      }`}
+                      className={`h-1.5 transition-all duration-300 rounded-full ${activeCorpIdx === i
+                        ? "w-7 bg-foreground"
+                        : "w-1.5 bg-foreground/20"
+                        }`}
                     />
                   ))}
                 </div>

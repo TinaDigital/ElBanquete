@@ -5,19 +5,24 @@
 
 :root {
   /* El Banquete Gastronómico — Premium B&W Palette */
-  --background: oklch(0.98 0.005 90);       /* off-white / warm paper */
-  --foreground: oklch(0.10 0 0);            /* near black */
+  --background: oklch(0.98 0.005 90);
+  /* off-white / warm paper */
+  --foreground: oklch(0.10 0 0);
+  /* near black */
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.10 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.10 0 0);
-  --primary: oklch(0.10 0 0);               /* black */
+  --primary: oklch(0.10 0 0);
+  /* black */
   --primary-foreground: oklch(0.98 0.005 90);
-  --secondary: oklch(0.93 0.005 90);        /* light grey */
+  --secondary: oklch(0.93 0.005 90);
+  /* light grey */
   --secondary-foreground: oklch(0.10 0 0);
   --muted: oklch(0.93 0.005 90);
   --muted-foreground: oklch(0.45 0 0);
-  --accent: oklch(0.82 0.04 85);            /* champagne / warm gold */
+  --accent: oklch(0.82 0.04 85);
+  /* champagne / warm gold */
   --accent-foreground: oklch(0.10 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
@@ -64,13 +69,43 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
+
+/* ─── Zoom-out general para pantallas de notebook / laptop ─── */
+/* Mantiene el Hero intacto (ya optimizado) y escala el resto de la página */
+
+/* Notebooks estándar y compactas (1366x768, 1426x788, 1440x900, 1280x800) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .site-zoom-wrapper {
+    zoom: 0.9;
+  }
+}
+
+/* Notebooks medianas / Full HD con escala (1536x864, 1600x900) */
+@media (min-width: 1440px) and (max-width: 1680px) {
+  .site-zoom-wrapper {
+    zoom: 0.9;
+  }
+}
+
+/* Laptops con altura de viewport compacta (con barra y pestañas) */
+@media (min-width: 1024px) and (max-height: 900px) {
+  .site-zoom-wrapper {
+    zoom: 0.9;
+  }
+}
+
+
+
 
 /* Utility: thin letter-spacing for headings */
 .tracking-editorial {
@@ -83,13 +118,23 @@
 
 /* ─── Marquee animations for gallery ─── */
 @keyframes marquee-left {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes marquee-right {
-  from { transform: translateX(-50%); }
-  to   { transform: translateX(0); }
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .animate-marquee {
@@ -102,6 +147,7 @@
     opacity: 0;
     transform: translateY(32px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -109,14 +155,20 @@
 }
 
 @keyframes hero-fade-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes hero-line-grow {
   from {
     transform: scaleY(0);
   }
+
   to {
     transform: scaleY(1);
   }
@@ -127,6 +179,7 @@
     transform: scale(1.08);
     opacity: 0.7;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
@@ -151,16 +204,45 @@
 }
 
 /* Animation delays */
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-.delay-500 { animation-delay: 500ms; }
-.delay-600 { animation-delay: 600ms; }
-.delay-700 { animation-delay: 700ms; }
-.delay-800 { animation-delay: 800ms; }
-.delay-1000 { animation-delay: 1000ms; }
-.delay-1200 { animation-delay: 1200ms; }
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-600 {
+  animation-delay: 600ms;
+}
+
+.delay-700 {
+  animation-delay: 700ms;
+}
+
+.delay-800 {
+  animation-delay: 800ms;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms;
+}
+
+.delay-1200 {
+  animation-delay: 1200ms;
+}
 
 /* ─── Premium button system ─── */
 
@@ -194,13 +276,16 @@
   background: white;
   color: var(--foreground);
 }
+
 .btn-primary-light::before {
   background: var(--foreground);
   transform: translateX(-100%);
 }
+
 .btn-primary-light:hover {
   color: white;
 }
+
 .btn-primary-light:hover::before {
   transform: translateX(0);
 }
@@ -210,10 +295,12 @@
   background: var(--foreground);
   color: var(--primary-foreground);
 }
+
 .btn-primary-dark::before {
   background: oklch(0.25 0 0);
   transform: translateX(-100%);
 }
+
 .btn-primary-dark:hover::before {
   transform: translateX(0);
 }
@@ -224,13 +311,16 @@
   color: var(--foreground);
   border: 1px solid var(--foreground);
 }
+
 .btn-primary-outline::before {
   background: var(--foreground);
   transform: translateX(-100%);
 }
+
 .btn-primary-outline:hover {
   color: var(--primary-foreground);
 }
+
 .btn-primary-outline:hover::before {
   transform: translateX(0);
 }
@@ -290,19 +380,23 @@
     background-color 0.35s ease,
     padding-left 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
 .contact-row:hover {
   padding-left: calc(1rem + 8px);
 }
+
 @media (min-width: 768px) {
   .contact-row:hover {
     padding-left: calc(1rem + 12px);
   }
 }
+
 .contact-row .contact-arrow {
   transition:
     transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
     color 0.3s ease;
 }
+
 .contact-row:hover .contact-arrow {
   transform: translate(4px, -4px);
 }
@@ -337,40 +431,43 @@
   background: var(--foreground);
   color: var(--primary-foreground);
 }
+
 .navbar-cta-solid::before {
   background: oklch(0.30 0 0);
   transform: translateX(-100%);
 }
+
 .navbar-cta-solid:hover::before {
   transform: translateX(0);
 }
 
 /* Transparent (hero-state) navbar CTA */
 .navbar-cta-glass {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: white;
-  border: 1px solid rgba(255,255,255,0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(4px);
 }
+
 .navbar-cta-glass::before {
   background: white;
   transform: translateX(-100%);
 }
+
 .navbar-cta-glass:hover {
   color: var(--foreground);
 }
+
 .navbar-cta-glass:hover::before {
   transform: translateX(0);
 }
 
 /* ─── Gradient fade for hero top ─── */
 .hero-gradient-top {
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.45) 0%,
-    rgba(0,0,0,0.15) 50%,
-    transparent 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.45) 0%,
+      rgba(0, 0, 0, 0.15) 50%,
+      transparent 100%);
 }
 
 /* ─── Luxury thin scrollbar for menu panel ─── */
@@ -378,16 +475,19 @@
   scrollbar-width: thin;
   scrollbar-color: oklch(0.75 0 0) transparent;
 }
+
 .menu-scrollbar::-webkit-scrollbar {
   width: 4px;
 }
+
 .menu-scrollbar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 .menu-scrollbar::-webkit-scrollbar-thumb {
   background: oklch(0.80 0 0);
 }
+
 .menu-scrollbar::-webkit-scrollbar-thumb:hover {
   background: oklch(0.50 0 0);
 }
-

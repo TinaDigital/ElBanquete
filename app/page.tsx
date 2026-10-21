@@ -11,11 +11,14 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <About />
-      <Events />
-      <Menus />
-      <Contact />
-      <Footer />
+      <div className="site-zoom-wrapper w-full overflow-x-clip">
+        <About />
+        <Events />
+        <Menus />
+        <Contact />
+        <Footer />
+      </div>
     </main>
   )
 }
+

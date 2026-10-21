@@ -71,9 +71,9 @@ function GalleryRow({
 
 export default function Events() {
   return (
-    <section id="eventos" className="py-20 md:py-32 bg-background overflow-hidden">
+    <section id="eventos" className="py-14 md:py-20 bg-background overflow-hidden">
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 mb-12 md:mb-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 mb-8 md:mb-10">
         <p className="text-xs tracking-wide-xl uppercase text-muted-foreground mb-4 font-sans">
           Nuestros eventos
         </p>
@@ -102,7 +102,7 @@ export default function Events() {
       />
 
       {/* 2 Tipos de Eventos — Abajo de la galería, espaciados, compactos y con efecto hover */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 mt-16 md:mt-24">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 mt-12 md:mt-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
           {/* Tarjeta 1: Sociales */}
           <div className="group relative p-7 md:p-9 border border-border bg-card/30 hover:bg-muted/40 hover:border-foreground/30 transition-all duration-300 flex flex-col justify-between">
