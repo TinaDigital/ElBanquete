@@ -71,7 +71,7 @@ function GalleryRow({
 
 export default function Events() {
   return (
-    <section id="eventos" className="py-14 md:py-20 bg-background overflow-hidden">
+    <section id="eventos" className="py-14 md:py-20 bg-secondary/40 border-y border-border/60 overflow-hidden">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-8 md:mb-10">
         <p className="text-xs tracking-wide-xl uppercase text-muted-foreground mb-4 font-sans">
@@ -105,7 +105,7 @@ export default function Events() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 mt-12 md:mt-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
           {/* Tarjeta 1: Sociales */}
-          <div className="group relative p-7 md:p-9 border border-border bg-card/30 hover:bg-muted/40 hover:border-foreground/30 transition-all duration-300 flex flex-col justify-between">
+          <div className="group relative p-7 md:p-9 border border-border/80 bg-background hover:bg-background/90 hover:border-foreground/30 shadow-xs transition-all duration-300 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between gap-4 mb-3">
                 <span className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground font-medium group-hover:text-foreground/80 transition-colors duration-200">
@@ -137,7 +137,7 @@ export default function Events() {
           </div>
 
           {/* Tarjeta 2: Corporativos */}
-          <div className="group relative p-7 md:p-9 border border-border bg-card/30 hover:bg-muted/40 hover:border-foreground/30 transition-all duration-300 flex flex-col justify-between">
+          <div className="group relative p-7 md:p-9 border border-border/80 bg-background hover:bg-background/90 hover:border-foreground/30 shadow-xs transition-all duration-300 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between gap-4 mb-3">
                 <span className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground font-medium group-hover:text-foreground/80 transition-colors duration-200">

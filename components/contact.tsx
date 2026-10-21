@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Contact() {
   return (
-    <section id="contacto" className="bg-background py-14 md:py-20 border-t border-border overflow-hidden">
+    <section id="contacto" className="bg-secondary/40 py-14 md:py-20 border-t border-border overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-center">
 
@@ -33,7 +33,7 @@ export default function Contact() {
                 href="https://wa.me/5491157826089"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact-row group flex items-center justify-between py-7 hover:bg-secondary -mx-4 px-4 transition-all duration-300"
+                className="contact-row group flex items-center justify-between py-7 hover:bg-background/80 -mx-4 px-4 transition-all duration-300"
               >
                 <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
                   <span className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground w-20 shrink-0">
@@ -56,7 +56,7 @@ export default function Contact() {
               {/* Email */}
               <a
                 href="mailto:contacto@elbanquete.com.ar"
-                className="contact-row group flex items-center justify-between py-7 hover:bg-secondary -mx-4 px-4 transition-all duration-300"
+                className="contact-row group flex items-center justify-between py-7 hover:bg-background/80 -mx-4 px-4 transition-all duration-300"
               >
                 <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
                   <span className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground w-20 shrink-0">
@@ -78,7 +78,7 @@ export default function Contact() {
                 href="https://www.instagram.com/banquetegastronomico/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact-row group flex items-center justify-between py-7 hover:bg-secondary -mx-4 px-4 transition-all duration-300"
+                className="contact-row group flex items-center justify-between py-7 hover:bg-background/80 -mx-4 px-4 transition-all duration-300"
               >
                 <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
                   <span className="font-sans text-[10px] tracking-wide-xl uppercase text-muted-foreground w-20 shrink-0">
