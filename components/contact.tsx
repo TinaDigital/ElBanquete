@@ -55,7 +55,7 @@ export default function Contact() {
 
               {/* Email */}
               <a
-                href="mailto:contacto@elbanquete.com.ar"
+                href="mailto:elbanquetemail@gmail.com"
                 className="contact-row group flex items-center justify-between py-7 hover:bg-background/80 -mx-4 px-4 transition-all duration-300"
               >
                 <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
@@ -63,7 +63,7 @@ export default function Contact() {
                     Email
                   </span>
                   <span className="font-serif text-xl md:text-3xl text-foreground break-all">
-                    contacto@elbanquete.com.ar
+                    elbanquetemail@gmail.com
                   </span>
                 </div>
                 <div className="flex items-center gap-3 shrink-0 ml-4">
